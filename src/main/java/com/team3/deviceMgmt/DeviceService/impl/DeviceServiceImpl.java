@@ -28,8 +28,9 @@ public class DeviceServiceImpl implements DeviceService{
         return optEmp.get();
     }
 
-    public void saveDevice(Device device){
+    public String saveDevice(Device device){
         deviceRepository.save(device);
+        return device.getUserId();
     }
 
     public void deleteDevice(Long deviceId){

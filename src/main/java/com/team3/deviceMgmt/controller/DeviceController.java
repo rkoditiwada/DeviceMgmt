@@ -28,11 +28,12 @@ public class DeviceController {
     }
 
     @RequestMapping(value="/addDevice", method= RequestMethod.POST)
-    public void getDevice(@RequestBody Device device)
+    public String getDevice(@RequestBody Device device)
     {
 
-        deviceService.saveDevice(device);
+       return deviceService.saveDevice(device);
     }
+
 
     public String deleteDevice(@PathParam(value = "userId") String userId, @PathParam(value = "deviceId") long deviceid )
     {

@@ -11,7 +11,7 @@ public interface DeviceService {
 
     public Device getDevice(Long deviceId);
 
-    public void saveDevice(Device device);
+    public String saveDevice(Device device);
 
     public void deleteDevice(Long deviceId);
 
