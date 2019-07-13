@@ -34,7 +34,7 @@ public class DeviceController {
        return deviceService.saveDevice(device);
     }
 
-    @RequestMapping(value="/api/{deviceId}", method= RequestMethod.DELETE)
+    @RequestMapping(value="/api/delete/{deviceId}", method= RequestMethod.DELETE)
     public String deleteDevice(@PathVariable(value = "deviceId") long deviceid )
     {
     	

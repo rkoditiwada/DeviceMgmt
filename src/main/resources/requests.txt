@@ -21,7 +21,7 @@ GET all url :
 http://localhost:8080/deviceMgmt/api/devices
 
 Delete url;
-http://localhost:8080/deviceMgmt/api/{deviceId}
+http://localhost:8080/deviceMgmt/api/delete/{deviceId}
 
 
 h2-console
