@@ -34,5 +34,15 @@ public class DeviceController {
         deviceService.saveDevice(device);
     }
 
+    public String deleteDevice(@PathParam(value = "userId") String userId, @PathParam(value = "deviceId") long deviceid )
+    {
+    	Device device = new Device();
+    	device.setDeviceId(deviceid);
+    	//device.setUserId(userId);
+    	
+    	deviceService.deleteDevice(deviceid);
+    	
+        return "Hello Get Method in getDevice";
+    }
 
 }
