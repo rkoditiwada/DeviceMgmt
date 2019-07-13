@@ -13,3 +13,9 @@
 post create url
 http://localhost:8080/deviceMgmt/addDevice
 
+
+GET by UserID url :
+http://localhost:8080/deviceMgmt/api/devices/{userID}
+
+GET all url :
+http://localhost:8080/deviceMgmt/api/devices
