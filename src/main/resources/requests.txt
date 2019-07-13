@@ -1,0 +1,15 @@
+{
+    "deviceName": "test",
+    "description": "test",
+    "type": "test",
+    "userId": "test",
+    "status": "test",
+    "createdBy": null,
+    "createdDate": null,
+    "modifiedBy": "modifiedBy",
+    "modifiedDate": null
+}
+
+post create url
+http://localhost:8080/deviceMgmt/addDevice
+
