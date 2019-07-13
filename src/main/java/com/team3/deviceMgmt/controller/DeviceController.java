@@ -5,10 +5,7 @@ import com.team3.deviceMgmt.DeviceService.DeviceService;
 import com.team3.deviceMgmt.models.Device;
 import com.team3.deviceMgmt.reopository.DeviceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
 import java.util.List;
@@ -28,6 +25,13 @@ public class DeviceController {
     public List<Device> getDevices() {
         List<Device> employees = deviceService.retrieveDevices();
         return employees;
+    }
+
+    @RequestMapping(value="/addDevice", method= RequestMethod.POST)
+    public void getDevice(@RequestBody Device device)
+    {
+
+        deviceService.saveDevice(device);
     }
 
 

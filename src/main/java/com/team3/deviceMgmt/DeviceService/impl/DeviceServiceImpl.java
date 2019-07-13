@@ -19,7 +19,7 @@ public class DeviceServiceImpl implements DeviceService{
     }
 
     public List<Device> retrieveDevices() {
-        List<Device> employees = (List)deviceRepository.findAll();
+        List<Device> employees = (List<Device>) deviceRepository.findAll();
         return employees;
     }
 
