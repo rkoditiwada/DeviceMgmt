@@ -23,8 +23,8 @@ public class DeviceServiceImpl implements DeviceService{
         return employees;
     }
 
-    public Device getDevice(Long employeeId) {
-        Optional<Device> optEmp = deviceRepository.findById(employeeId);
+    public Device getDevice(Long deviceId) {
+        Optional<Device> optEmp = deviceRepository.findById(deviceId);
         return optEmp.get();
     }
 
