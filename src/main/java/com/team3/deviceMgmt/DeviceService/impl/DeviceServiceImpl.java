@@ -30,7 +30,7 @@ public class DeviceServiceImpl implements DeviceService{
 
     public String saveDevice(Device device){
         deviceRepository.save(device);
-        return device.getUserId();
+        return device.getDeviceId().toString();
     }
 
     public void deleteDevice(Long deviceId){
