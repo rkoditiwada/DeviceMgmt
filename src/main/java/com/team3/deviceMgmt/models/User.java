@@ -4,11 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Table(name = "USER")
 public class User {
     @Id
     @GeneratedValue
+    @Column(name = "userId", nullable = false)
     private Long userId;
+
+    @Column(name = "userName")
     private String userName;
+
+    @Column(name = "role")
     private String role;
 
 
