@@ -1,4 +1,4 @@
-package  com.models;
+package  com.team3.deviceMgmt.models;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
