@@ -10,6 +10,12 @@
     "modifiedDate": null
 }
 
+{
+    "userId": "",
+    "userName": "userName1",
+    "role": "role1"
+}
+
 post create url
 http://localhost:8080/deviceMgmt/addDevice
 
@@ -26,3 +32,10 @@ http://localhost:8080/deviceMgmt/api/delete/{deviceId}
 
 h2-console
 http://localhost:8080/deviceMgmt/h2-console/
+
+
+POST new user : http://localhost:8080/deviceMgmt/addUser
+
+GET USERs :  http://localhost:8080/deviceMgmt/api/users
+
+

@@ -22,25 +22,7 @@ public class UserController {
     public User getUser(@PathVariable Long userId)
     {
 
-        if(userId == 1L) {
-            User user = new User();
-            user.setRole("GeneralUser");
-            user.setUserId(1L);
-            user.setUserName("General User");
-
-            return user;
-        }
-
-        if(userId == 2L) {
-            User user = new User();
-            user.setRole("Admin");
-            user.setUserId(2L);
-            user.setUserName("Admin User");
-
-            return user;
-        }
-
-        return new User();
+        return userService.getUsersByUserId(userId);
     }
 
     @RequestMapping(value="/addUser", method= RequestMethod.POST)
