@@ -13,3 +13,7 @@
 post create url
 http://localhost:8080/deviceMgmt/addDevice
 
+
+Get url
+http://localhost:8080/deviceMgmt/api/devices
+
