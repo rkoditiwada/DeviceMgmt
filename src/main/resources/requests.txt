@@ -22,3 +22,7 @@ http://localhost:8080/deviceMgmt/api/devices
 
 Delete url;
 http://localhost:8080/deviceMgmt/api/{deviceId}
+
+
+h2-console
+http://localhost:8080/deviceMgmt/h2-console/
