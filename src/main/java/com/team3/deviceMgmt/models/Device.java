@@ -53,6 +53,9 @@ public class Device {
         this.modifiedDate = modifiedDate;
     }
 
+    public Device() {
+    }
+
     public Long getDeviceId() {
         return deviceId;
     }
