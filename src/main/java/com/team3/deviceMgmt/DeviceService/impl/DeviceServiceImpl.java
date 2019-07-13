@@ -40,6 +40,11 @@ public class DeviceServiceImpl implements DeviceService{
     public void updateDevice(Device device) {
         deviceRepository.save(device);
     }
+    
+    public List<Device> getDevicesByUserId(String userId)
+    {
+    	return deviceRepository.findByUserId(userId);
+    }
 
 
 }

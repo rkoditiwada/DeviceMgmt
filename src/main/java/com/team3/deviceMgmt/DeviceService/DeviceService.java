@@ -16,4 +16,6 @@ public interface DeviceService {
     public void deleteDevice(Long deviceId);
 
     public void updateDevice(Device device);
+    
+    public List<Device> getDevicesByUserId(String userId);
 }

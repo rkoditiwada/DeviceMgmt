@@ -46,4 +46,9 @@ public class DeviceController {
         return "Hello Get Method in getDevice";
     }
 
+    @GetMapping("/api/devices/{userId}")
+    public List<Device> getDevicesByUserId(@PathVariable("userId") String userId) {
+        List<Device> devices = deviceService.getDevicesByUserId(userId);
+        return devices;
+    }
 }
