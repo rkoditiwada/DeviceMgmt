@@ -25,7 +25,9 @@ public class DeviceServiceImpl implements DeviceService{
 
     public Device getDevice(Long deviceId) {
         Optional<Device> optEmp = deviceRepository.findById(deviceId);
-        return optEmp.get();
+        if(optEmp.isPresent() ) {
+        	return optEmp.get();
+        }else return null;
     }
 
     public String saveDevice(Device device){

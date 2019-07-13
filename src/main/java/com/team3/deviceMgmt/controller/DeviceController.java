@@ -34,11 +34,17 @@ public class DeviceController {
        return deviceService.saveDevice(device);
     }
 
-    @RequestMapping(value="/api/delete/{deviceId}", method= RequestMethod.DELETE)
+    @SuppressWarnings("unused")
+	@RequestMapping(value="/api/delete/{deviceId}", method= RequestMethod.DELETE)
     public String deleteDevice(@PathVariable(value = "deviceId") long deviceid )
     {
-    	
     	System.out.println("deviceid:"+deviceid);
+    	Device device = deviceService.getDevice(deviceid);
+    	//System.out.println("device id from db:"+device.getDeviceId());
+    	if(device == null ) {
+    		return "No device details found";
+    	}
+    	
     	deviceService.deleteDevice(deviceid);
     	
         return "Deleted successfully";
