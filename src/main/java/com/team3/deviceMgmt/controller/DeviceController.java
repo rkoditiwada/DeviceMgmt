@@ -34,16 +34,14 @@ public class DeviceController {
        return deviceService.saveDevice(device);
     }
 
-    @RequestMapping(value="api/{deviceId}", method= RequestMethod.DELETE)
-    public String deleteDevice(@PathParam(value = "deviceId") long deviceid )
+    @RequestMapping(value="/api/{deviceId}", method= RequestMethod.DELETE)
+    public String deleteDevice(@PathVariable(value = "deviceId") long deviceid )
     {
-    	Device device = new Device();
-    	device.setDeviceId(deviceid);
-    	//device.setUserId(userId);
+    	
     	System.out.println("deviceid:"+deviceid);
     	deviceService.deleteDevice(deviceid);
     	
-        return "Hello Get Method in getDevice";
+        return "Deleted successfully";
     }
 
     @GetMapping("/api/devices/{userId}")
