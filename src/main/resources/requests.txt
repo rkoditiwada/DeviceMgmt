@@ -19,3 +19,6 @@ http://localhost:8080/deviceMgmt/api/devices/{userID}
 
 GET all url :
 http://localhost:8080/deviceMgmt/api/devices
+
+Delete url;
+http://localhost:8080/deviceMgmt/api/{deviceId}
